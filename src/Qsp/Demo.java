@@ -26,16 +26,6 @@ public class Demo
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("https://demo.actitime.com/login.do");
-		WebElement link = driver.findElement(By.linkText("actiTIME Inc."));
-		Actions act = new Actions(driver);
-		Thread.sleep(2000);
-		act.contextClick(link).perform();
-		Thread.sleep(2000);
-		Robot r = new Robot();
-		int t = KeyEvent.VK_T;
-		r.keyPress(t);
-		Thread.sleep(1000);
-		r.keyRelease(t);
 		Thread.sleep(3000);
 		driver.quit();
 		
